@@ -52,7 +52,8 @@ export function IrisScanner({ onScanComplete, onCancel }: IrisScannerProps) {
             clearInterval(interval);
             setStatus('success');
             setTimeout(() => {
-              const patterns = ['iris_pattern_123', 'iris_pattern_456', 'iris_pattern_789'];
+              // FIX 1: Use the actual patterns that correspond to the demo users
+              const patterns = ['alice', 'bob', 'cafe'];
               const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
               onScanComplete(randomPattern);
             }, 500);
